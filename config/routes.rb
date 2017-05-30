@@ -11,7 +11,21 @@ Rails.application.routes.draw do
    end
  end
 
- get '/' => 'links#index'
+  get '/' => 'links#index'
 
- 
+  get '/links/new' => 'links#new'
+  post '/links' => 'links#create'
+
+  get '/links/:id' => 'links#show'
+
+  get '/links/:id/edit' => 'links#edit'
+  patch '/links/:id' => 'links#update'
+
+  delete '/links/:id' => 'links#destroy'
+
+  get '/visits/new' => 'visits#new'
+  post '/visits' => 'visits#create'
+
+
+
 end
