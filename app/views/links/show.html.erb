@@ -1,2 +1,8 @@
 <h1>Link Stats for <%= @link.slug%></h1>
 <h3>Visits: <%= @link.visit_count %></h3>
+
+<h4><a href="@link.target_url">Full Link</a></h4>
+
+<div>
+  <%= link_to "Delete Link", "/links#{ @link.id}", method: :delete %>
+</div>

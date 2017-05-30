@@ -1,1 +1,6 @@
 <h1> Your Links </h1>
+
+
+<%= @links.each do |link|%>
+<h2><a href="/links/<%= link.id %>"><%= link.slug %></a></h2>
+<% end %>
